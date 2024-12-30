@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func sendDataByNotification(_ sender: Any) {
+        let name : String = "yahya"
+        NotificationCenter.default.post(name: Notification.Name(NAME_NOTIFICATION_CENTER), object: name)
+    }
+    
 }
 

@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O0P-9k-e0m">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PassingDataByNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center Notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-bC-Eos">
+                                <rect key="frame" x="20" y="159" width="353" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIb-sO-1WI">
+                                <rect key="frame" x="139.66666666666666" y="239" width="113.66666666666666" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Send Notify"/>
+                                <connections>
+                                    <action selector="sendDataByNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Oj-nl-n7D"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dHB-bC-Eos" secondAttribute="trailing" constant="20" id="9fT-jJ-tb1"/>
+                            <constraint firstItem="dHB-bC-Eos" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LSG-aW-3Pz"/>
+                            <constraint firstItem="hIb-sO-1WI" firstAttribute="top" secondItem="dHB-bC-Eos" secondAttribute="bottom" constant="50" id="sE7-Lw-kPt"/>
+                            <constraint firstItem="dHB-bC-Eos" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="tSl-6i-phK"/>
+                            <constraint firstItem="hIb-sO-1WI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tZZ-ul-Tcq"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="y0y-Sc-LhY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1031" y="771"/>
+        </scene>
+        <!--Tab 1-->
+        <scene sceneID="cwe-Cz-Rd7">
+            <objects>
+                <viewController id="fyw-al-T9G" customClass="TabOneViewController" customModule="PassingDataByNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2lU-Ua-XEK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EeO-W0-ZPr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tab 1" image="lamp.table.fill" catalog="system" id="lDI-QL-Sjq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyY-02-W7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193" y="770"/>
+        </scene>
+        <!--Tab 2-->
+        <scene sceneID="EA7-cW-rPn">
+            <objects>
+                <viewController id="Maz-lU-V2j" customClass="TabTwoViewController" customModule="PassingDataByNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPV-8D-8hh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="83x-Kr-aYq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tab 2" image="square.and.arrow.up.fill" catalog="system" id="sMT-gz-7Pf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvs-wL-51f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="770"/>
+        </scene>
+        <!--Tab 3-->
+        <scene sceneID="Qc9-Bb-4T7">
+            <objects>
+                <viewController id="qbj-mR-ysU" customClass="TabThreeViewController" customModule="PassingDataByNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HXk-B5-qyn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x7m-0Z-9XU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tab 3" image="trash.fill" catalog="system" id="gZC-ag-E7A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTf-1l-MZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="770"/>
+        </scene>
+        <!--Center Tab Bar View Controller-->
+        <scene sceneID="zPl-lz-v2Q">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="O0P-9k-e0m" customClass="CenterTabBarViewController" customModule="PassingDataByNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GMd-p1-wtg">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8FT-ae-Kl5"/>
+                        <segue destination="fyw-al-T9G" kind="relationship" relationship="viewControllers" id="iPM-bE-gWx"/>
+                        <segue destination="Maz-lU-V2j" kind="relationship" relationship="viewControllers" id="n2h-lG-Dt8"/>
+                        <segue destination="qbj-mR-ysU" kind="relationship" relationship="viewControllers" id="Eko-t7-7V7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGx-rN-aHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="lamp.table.fill" catalog="system" width="97" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
+        <image name="trash.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
